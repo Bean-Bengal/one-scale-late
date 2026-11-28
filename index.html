@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>One Scale, Late</title></head>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wait For The Horn</title></head>
 <body>
 <script data-bean-store>(function(){if(typeof location!=='undefined'&&location&&location.protocol==='about:'&&typeof document!=='undefined'&&document.addEventListener){document.addEventListener('click',function(e){var a=e.target&&e.target.closest&&e.target.closest('a[href^="#"]');if(!a||a.target==='_blank')return;e.preventDefault();try{location.hash=a.getAttribute('href')}catch(x){}},true)}if(typeof window==='undefined')return;try{window.localStorage.getItem('x');return}catch(e){}var d=Object.assign({},window.__BEAN_SAVED||{});function post(){try{parent.postMessage({type:'bean-store',data:d},'*')}catch(e){}}var ls={getItem:function(k){return Object.prototype.hasOwnProperty.call(d,k)?d[k]:null},setItem:function(k,v){d[k]=String(v);post()},removeItem:function(k){delete d[k];post()},clear:function(){d={};post()},key:function(i){return Object.keys(d)[i]||null}};Object.defineProperty(ls,'length',{get:function(){return Object.keys(d).length}});try{Object.defineProperty(window,'localStorage',{value:ls,configurable:true})}catch(e){}})();</script>
 <script data-kit-in="music">
@@ -343,52 +343,54 @@
 </script>
 <script>
 Kit.music({
-  title: 'One Scale, Late',
+  title: 'Wait For The Horn',
   by: 'Bean',
   kind: 'a song',
-  about: 'Sitting up late with Kind of Blue, staying on one scale and not going anywhere.',
-  notes: 'D dorian all the way through. The bass says two notes, the piano wanders, and halfway it steps up and then comes back down.',
-  bpm: 72,
+  about: 'Waiting for someone to turn up, walking up and down the same street until they do.',
+  notes: 'D dorian for all 16 bars. The bass just walks up and down. Piano chords are far apart. The horn waits until the second half.',
+  bpm: 76,
   key: 'D',
   scale: 'dorian',
   swing: 0.15,
   steps: 16,
   cover: { drawing: 12 },
   parts: {
-    drums: { inst: 'drums', vol: 0.6 },
+    drums: { inst: 'drums', vol: 0.5 },
     bass: { inst: 'upright', octave: 2, vol: 0.8 },
-    pad: { inst: 'pad', octave: 4, vol: 0.3, pan: -0.3, verb: 0.5 },
-    lead: { inst: 'piano', octave: 5, vol: 0.7, pan: 0.2, verb: 0.4, human: 0.5 },
-    bell: { inst: 'bell', octave: 6, vol: 0.35, pan: 0.4, verb: 0.6, delay: 0.3 }
+    piano: { inst: 'piano', chords: true, octave: 4, vol: 0.45, pan: -0.25, verb: 0.4, human: 0.5 },
+    pad: { inst: 'pad', octave: 4, vol: 0.25, pan: 0.3, verb: 0.6 },
+    bell: { inst: 'bell', octave: 6, vol: 0.35, pan: 0.4, verb: 0.6, delay: 0.3 },
+    horn: { inst: 'brass', octave: 4, vol: 0.6, pan: 0.1, verb: 0.4, human: 0.4 }
   },
   sections: {
-    intro: {
-      bass: "1 . . 1 . . . . . . 7, . . . . . .",
+    walk: {
       drums: ['....r.......r...'],
-      pad: "1 - - - - - - - - - - - - - - -"
+      bass: "1 . . . 2 . . . 3 . . . 4 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . . 2 . . . 3 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . .",
+      piano: "1 - - - - - - - - - - - - - - - . . . . . . . . . . . . . . . . 4 - - - - - - - - - - - - - - - . . . . . . . . . . . . . . . .",
+      bell: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 . . ."
     },
-    A: {
+    walk2: {
       drums: ['k.......k.......', '..h...h...h...h.'],
-      bass: "1 . . 1 . . . . . . 7, . . . . . .",
-      pad: "1 - - - - - - - - - - - - - - -",
-      lead: "5 . . . . . 3 . . . . . 4 - . . . . . . . . . . 2 - - - . . . .",
-      bell: ". . . . . . . . . . . . . . 5 . . . . . . . . . . . . . 1 . . ."
+      bass: "1 . . . 2 . . . 3 . . . 4 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . . 2 . . . 3 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . .",
+      piano: "1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - - 1 - - - - - - - - - - - - - - - 5 - - - - - - - - - - - - - - -",
+      pad: "1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - - 1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - -",
+      bell: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 . . ."
     },
-    B: {
+    horn: {
       drums: ['k.......k.......', '..h...h...h...h.'],
-      bass: "2 . . 2 . . . . . . 1 . . . . .",
-      pad: "2 - - - - - - - - - - - - - - -",
-      lead: "6 . . . . . 4 . . . . . 5 - . . . . . . 3 . . . 4 - - - . . . .",
-      bell: ". . . . . . . . . . . . . . 6 . . . . . . . . . . . . . 2 . . ."
+      bass: "1 . . . 2 . . . 3 . . . 4 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . . 2 . . . 3 . . . 5 . . . 4 . . . 3 . . . 2 . . . 1 . . .",
+      piano: "1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - - 1 - - - - - - - - - - - - - - - 5 - - - - - - - - - - - - - - -",
+      pad: "1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - - 1 - - - - - - - - - - - - - - - 4 - - - - - - - - - - - - - - -",
+      horn: "5 - - - 3 - - - . . . . 5 - 6 - 5 - - - - - - - . . . . . . . . 6 - - - 5 - - - 3 - - - . . . . 2 - 3 - 5 - - - - - - - . . . . . . . .",
+      bell: ". . . . . . . . . . . . . . . . . . . . . . . . . . . . 5 . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3 . . ."
     },
-    outro: {
-      bass: "1 . . 1 . . . . . . . . . . . .",
-      pad: "1 - - - - - - - - - - - - - - -",
-      lead: "3 . . . 2 - - - 1 - - - - - - -",
-      bell: ". . . . . . . . . . . . 5 . . ."
+    end: {
+      bass: "1 . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+      pad: "1 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -",
+      horn: "3 - - - 2 - - - 1 - - - - - - - - - - - - - - - - - - - - - - -"
     }
   },
-  song: ['intro', 'A', 'A', 'B', 'B', 'A', 'A', 'outro']
+  song: ['walk', 'walk', 'walk2', 'walk2', 'horn', 'horn', 'end']
 })
 </script>
 </body></html>
